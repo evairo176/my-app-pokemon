@@ -1,7 +1,15 @@
-import { globalAction } from "../global/GlobalSlices";
+import { globalReducer } from "../slices/GlobalSlices";
 
 const setLoading = (value) => {
-  return globalAction({ type: "SET_LOADING", value });
+  return globalReducer({ type: "SET_LOADING", value });
 };
 
-export { setLoading };
+const setPokemon = (value) => {
+  return globalReducer({ type: "SET_POKEMON", value });
+};
+
+const setPokemonDetail = (value) => {
+  return globalReducer({ type: "SET_POKEMON_DETAIL", value });
+};
+
+export { setLoading, setPokemon, setPokemonDetail };

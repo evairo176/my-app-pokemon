@@ -4,6 +4,8 @@ import AppRoutes from "./routes/AppRoutes";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useSelector } from "react-redux";
 import Loading from "./components/moleculars/Loading";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const storeData = useSelector((store) => store?.global);
@@ -11,6 +13,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ToastContainer />
       {isLoading && <Loading />}
       <AppRoutes />
     </BrowserRouter>
