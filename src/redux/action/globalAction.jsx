@@ -12,4 +12,12 @@ const setPokemonDetail = (value) => {
   return globalReducer({ type: "SET_POKEMON_DETAIL", value });
 };
 
-export { setLoading, setPokemon, setPokemonDetail };
+const setMyPokemon = (value) => {
+  return globalReducer({ type: "SET_MY_POKEMON", value });
+};
+
+const setAction = (value) => {
+  return globalReducer({ type: "SET_ACTION", value });
+};
+
+export { setLoading, setPokemon, setPokemonDetail, setMyPokemon, setAction };

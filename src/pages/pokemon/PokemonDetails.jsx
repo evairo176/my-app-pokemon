@@ -1,13 +1,13 @@
 import React, { Fragment, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { getPokemonDetailAction } from "../../redux/action/pokemonAction";
 
 function PokemonDetails() {
   const dispatch = useDispatch();
   const storeData = useSelector((store) => store?.global);
   const { pokemon_detail } = storeData;
-
+  const navigate = useNavigate();
   const params = useParams();
   const id = params.id;
 
@@ -23,7 +23,22 @@ function PokemonDetails() {
     <Fragment>
       <div className="container mt-3">
         <div className="card">
-          <div className="card-header">Pokemon Detail</div>
+          <div className="card-header">
+            {" "}
+            <div
+              className="njdwadj"
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              <div>Pokemon Detail</div>
+              <button className="btn btn-danger" onClick={() => navigate("/")}>
+                Back
+              </button>
+            </div>
+          </div>
           <div className="card-body">
             <div className="content-body">
               <div className="items">

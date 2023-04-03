@@ -5,6 +5,9 @@ const GlobalSlices = createSlice({
   initialState: {
     isLoading: false,
     pokemon: [],
+    pokemon_detail: [],
+    my_pokemon: [],
+    action: "",
   },
   reducers: {
     globalReducer: (state, action) => {
@@ -23,6 +26,16 @@ const GlobalSlices = createSlice({
           return {
             ...state,
             pokemon_detail: action.payload.value,
+          };
+        case "SET_MY_POKEMON":
+          return {
+            ...state,
+            my_pokemon: action.payload.value,
+          };
+        case "SET_ACTION":
+          return {
+            ...state,
+            action: action.payload.value,
           };
         default:
           return state;

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import PaginationComponent from "../../components/moleculars/PaginationComponent";
 import {
-  addTomyListPokemon,
+  addTomyListPokemonAction,
   getAllPokemonAction,
 } from "../../redux/action/pokemonAction";
 
@@ -28,7 +28,7 @@ function Home() {
     const data = {
       name: value,
     };
-    dispatch(await addTomyListPokemon(data));
+    dispatch(await addTomyListPokemonAction(data));
   };
 
   return (
