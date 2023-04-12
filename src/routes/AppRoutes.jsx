@@ -1,8 +1,8 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Home from "../pages/home/Home";
 import MyPokemonList from "../pages/pokemon/MyPokemonList";
 import PokemonDetails from "../pages/pokemon/PokemonDetails";
+import { Home } from "../pages";
 
 function AppRoutes() {
   return (
