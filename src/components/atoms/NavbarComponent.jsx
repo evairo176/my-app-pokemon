@@ -57,21 +57,6 @@ function NavbarComponent() {
             <div className="liquid"></div>
           </div>
         </li>
-        {/* <li>
-          <div>Home</div>
-        </li>
-        <li>
-          <div>About</div>
-        </li>
-        <li>
-          <div>Service</div>
-        </li>
-        <li>
-          <div>Features</div>
-        </li>
-        <li>
-          <div>Contact</div>
-        </li> */}
       </ul>
       <div
         id="nav-icon1"
@@ -82,11 +67,6 @@ function NavbarComponent() {
         <span></span>
         <span></span>
       </div>
-      {/* <div className="open-icon-menu">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div> */}
     </nav>
   );
 }

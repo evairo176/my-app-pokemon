@@ -1,11 +1,19 @@
 import React, { Fragment } from "react";
 import NavbarComponent from "../../components/atoms/NavbarComponent";
+import bg from "../../assets/images/ilustration/image 8.png";
 
 function Home() {
   return (
     <Fragment>
       <NavbarComponent />
-      <section className="banner"></section>
+      <section className="banner">
+        <div className="container-banner">
+          <div className="container-content-banner"></div>
+          <div className="image-banner">
+            <img src={bg} alt="" />
+          </div>
+        </div>
+      </section>
       <section className="about">
         <div className="content">
           <div className="title">Responsive Navigation Bar on Scroll</div>
