@@ -135,7 +135,7 @@
   color: var(--white);
   font-size: 15px;
   letter-spacing: 1px;
-  z-index: 7;
+  z-index: 1;
 }
 .nav-item-cs .liquid {
   position: absolute;

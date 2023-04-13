@@ -9,4 +9,9 @@
 
 :root {
   --white: #ffff;
+  --primary: #ffffff;
+  --text-color1: #000000;
+  --text-color2: #565656;
+  --text-color3: #ffffff;
+  --bg-color1: #2639ed;
 }
