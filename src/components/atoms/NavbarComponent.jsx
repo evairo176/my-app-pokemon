@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "../../assets/css/landingpage.css";
 
 function NavbarComponent() {
   const [toggle, setToggle] = useState(false);
@@ -30,7 +29,7 @@ function NavbarComponent() {
   return (
     <nav className={`container-navbar ${sticky ? "sticky" : ""}`}>
       <div className="container-logo">
-        <div className="logo">DICKI PRASETYA</div>
+        <div className="logo">Evairo</div>
       </div>
       <ul className={`menu-list ${toggle ? "open" : ""}`}>
         <li>

@@ -7,6 +7,7 @@ import Loading from "./components/moleculars/Loading";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../src/assets/css/custom.css";
+
 import NavbarComponent from "./components/atoms/NavbarComponent";
 
 function App() {

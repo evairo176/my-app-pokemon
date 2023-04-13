@@ -4,7 +4,6 @@
     padding: 10px 30px;
   }
   .container-content {
-    padding: 20px 30px;
     padding: 80px 30px 80px 30px;
   }
   .container-navbar.sticky {
@@ -20,6 +19,9 @@
     padding-top: 0px;
     position: relative;
   }
+  .container-content-banner {
+    padding-top: 20px;
+  }
 }
 
 @media (min-width: 480px) and (max-width: 575.98px) {
@@ -27,7 +29,6 @@
     padding: 10px 30px;
   }
   .container-content {
-    padding: 20px 30px;
     padding: 80px 30px 80px 30px;
   }
   .container-navbar.sticky {
@@ -44,7 +45,6 @@
     padding: 10px 30px;
   }
   .container-content {
-    padding: 20px 30px;
     padding: 80px 30px 50px 30px;
   }
   .container-navbar.sticky {
@@ -61,7 +61,6 @@
     padding: 10px 30px;
   }
   .container-content {
-    padding: 20px 30px;
     padding: 80px 30px 80px 30px;
   }
   .container-navbar.sticky {
