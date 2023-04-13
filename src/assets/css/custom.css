@@ -16,3 +16,6 @@
   --text-color3: #ffffff;
   --bg-color1: #2639ed;
 }
+.container-content {
+  position: relative;
+}

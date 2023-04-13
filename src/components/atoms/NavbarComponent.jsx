@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../../assets/css/navbar.css";
+import "../../assets/css/landingpage.css";
 
 function NavbarComponent() {
   const [toggle, setToggle] = useState(false);
