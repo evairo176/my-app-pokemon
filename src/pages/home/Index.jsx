@@ -34,8 +34,8 @@ function Home() {
               </div>
             </div>
           </div>
-          <FloatingSquare />
         </section>
+        <FloatingSquare />
       </TemplateComponent>
       <section className="about">
         <div className="content">
