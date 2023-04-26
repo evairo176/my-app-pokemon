@@ -5,6 +5,7 @@ import Gap from "../../components/atoms/Gap";
 import FloatingSquare from "../../components/atoms/FloatingSquare";
 import "../../assets/css/landingpage.css";
 import "../../assets/css/responsive.css";
+import SliderComponent from "../../components/moleculars/SliderComponent";
 
 function Home() {
   return (
@@ -42,20 +43,16 @@ function Home() {
       <TemplateComponent>
         <section className="idea">
           <div className="container-idea">
-            <div className="row">
-              <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                <div className="content-idea">
-                  <div className="title">How can we help your Business ?</div>
-                  <div className="p-title">
-                    We build readymade websites, mobile applications, and
-                    elaborate online business services.
-                  </div>
-                </div>
+            <div className="content-idea">
+              <div className="title">How can we help your Business ?</div>
+              <div className="p-title">
+                We build readymade websites, mobile applications, and elaborate
+                online business services.
               </div>
-              <div className="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                <div className="card-content-idea">
-                  <div className="card-idea"></div>
-                </div>
+            </div>
+            <div className="card-content-idea">
+              <div className="card-slider">
+                <SliderComponent />
               </div>
             </div>
           </div>

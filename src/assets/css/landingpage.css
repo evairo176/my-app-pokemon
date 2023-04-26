@@ -187,6 +187,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .about {
   padding: 40px 0px;
@@ -403,20 +406,52 @@
 
 /* section idea  */
 
-/* .container-idea{
-
-} */
-
+.card-idea {
+  width: 308px;
+  background: var(--bg-color2);
+  padding: 32px 40px;
+  text-align: center;
+  margin-right: 20px;
+}
 .content-idea .title {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 400;
+  color: var(--text-color1);
+}
+.content-idea .p-title {
+  font-size: 16px;
+  line-height: 140%;
+  font-weight: 400;
+  color: var(--text-color4);
+}
+
+.container-idea {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-idea .title {
   font-size: 35px;
   font-weight: 600;
   line-height: 49px;
   color: var(--text-color1);
 }
-.content-idea .p-title {
+.card-idea .p-title {
   font-size: 16px;
   font-weight: 400;
   line-height: 25px;
   color: var(--text-color2);
   text-align: justify;
 }
+.container-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* .item-pagination h3 {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text-color4);
+} */
