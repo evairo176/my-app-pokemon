@@ -27,7 +27,6 @@
     max-width: 320px;
     position: relative;
     overflow: auto;
-    padding-left: 190px;
   }
   .card-idea {
     margin-right: 10px;
@@ -54,7 +53,6 @@
     max-width: 480px;
     position: relative;
     overflow: auto;
-    padding-left: 190px;
   }
   .card-idea {
     margin-right: 10px;
@@ -80,7 +78,6 @@
     max-width: 576px;
     position: relative;
     overflow: auto;
-    padding-left: 190px;
   }
   .card-idea {
     margin-right: 10px;
@@ -106,7 +103,6 @@
     max-width: 768px;
     position: relative;
     overflow: auto;
-    padding-left: 190px;
   }
   .card-idea {
     margin-right: 10px;

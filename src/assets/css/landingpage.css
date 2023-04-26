@@ -408,7 +408,7 @@
 /* section idea  */
 
 .card-idea {
-  max-width: 308px;
+  width: 280px;
   background: var(--bg-color2);
   padding: 32px 40px;
   text-align: center;
@@ -453,8 +453,5 @@
 }
 .container-card-f {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-
-  /* padding-left: 220px; */
+  margin: auto;
 }
