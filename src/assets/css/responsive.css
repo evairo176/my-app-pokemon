@@ -150,11 +150,9 @@
     width: 100%;
     max-width: 1000px;
     position: relative;
-    overflow: hidden;
-  }
-  .container-card-f:hover {
     overflow: auto;
   }
+
   .card-idea {
     margin-right: 10px;
   }
