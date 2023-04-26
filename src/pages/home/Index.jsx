@@ -40,9 +40,9 @@ function Home() {
         </section>
         <FloatingSquare />
       </TemplateComponent>
-      <TemplateComponent>
-        <section className="idea">
-          <div className="container-idea">
+      <section className="idea">
+        <div className="container-idea-f">
+          <TemplateComponent>
             <div className="content-idea">
               <div className="title">How can we help your Business ?</div>
               <div className="p-title">
@@ -50,14 +50,11 @@ function Home() {
                 online business services.
               </div>
             </div>
-            <div className="card-content-idea">
-              <div className="card-slider">
-                <SliderComponent />
-              </div>
-            </div>
-          </div>
-        </section>
-      </TemplateComponent>
+          </TemplateComponent>
+
+          <SliderComponent />
+        </div>
+      </section>
     </Fragment>
   );
 }

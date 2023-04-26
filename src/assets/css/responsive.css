@@ -22,11 +22,16 @@
   .container-content-banner {
     padding-top: 20px;
   }
-  .container-idea {
-    display: block;
+  .container-card-f {
+    width: 100%;
+    max-width: 320px;
+    position: relative;
+    overflow: auto;
+    padding-left: 190px;
   }
-  .card-slider {
-    margin-top: 20px;
+  .card-idea {
+    margin-right: 10px;
+    padding: 30px 30px;
   }
 }
 
@@ -44,6 +49,16 @@
     padding-top: 80px;
     position: relative;
   }
+  .container-card-f {
+    width: 100%;
+    max-width: 480px;
+    position: relative;
+    overflow: auto;
+    padding-left: 190px;
+  }
+  .card-idea {
+    margin-right: 10px;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -60,6 +75,16 @@
     padding-top: 80px;
     position: relative;
   }
+  .container-card-f {
+    width: 100%;
+    max-width: 576px;
+    position: relative;
+    overflow: auto;
+    padding-left: 190px;
+  }
+  .card-idea {
+    margin-right: 10px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -75,6 +100,16 @@
   .container-content-banner {
     padding-top: 80px;
     position: relative;
+  }
+  .container-card-f {
+    width: 100%;
+    max-width: 768px;
+    position: relative;
+    overflow: auto;
+    padding-left: 190px;
+  }
+  .card-idea {
+    margin-right: 10px;
   }
 }
 
@@ -110,5 +145,8 @@
   .container-content-banner {
     padding-top: 80px;
     position: relative;
+  }
+  .card-idea {
+    margin-right: 10px;
   }
 }

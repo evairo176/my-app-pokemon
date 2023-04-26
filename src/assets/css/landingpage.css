@@ -301,6 +301,7 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
+  padding: 0;
 }
 
 .circles li {
@@ -407,11 +408,11 @@
 /* section idea  */
 
 .card-idea {
-  width: 308px;
+  max-width: 308px;
   background: var(--bg-color2);
   padding: 32px 40px;
   text-align: center;
-  margin-right: 20px;
+  /* margin-right: 20px; */
 }
 .content-idea .title {
   font-size: 24px;
@@ -450,11 +451,10 @@
   align-items: center;
   justify-content: center;
 }
-/* .card-content-idea {
-  max-width: 308px;
-} */
-/* .item-pagination h3 {
-  font-size: 15px;
-  font-weight: 400;
-  color: var(--text-color4);
-} */
+.container-card-f {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  /* padding-left: 220px; */
+}
