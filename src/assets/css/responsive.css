@@ -22,6 +22,12 @@
   .container-content-banner {
     padding-top: 20px;
   }
+  .container-idea {
+    display: block;
+  }
+  .card-slider {
+    margin-top: 20px;
+  }
 }
 
 @media (min-width: 480px) and (max-width: 575.98px) {

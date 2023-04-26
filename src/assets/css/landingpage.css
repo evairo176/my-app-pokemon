@@ -450,6 +450,9 @@
   align-items: center;
   justify-content: center;
 }
+/* .card-content-idea {
+  max-width: 308px;
+} */
 /* .item-pagination h3 {
   font-size: 15px;
   font-weight: 400;

@@ -10,15 +10,15 @@ function SliderComponent() {
     dots: true,
     infinite: false,
     speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
     initialSlide: 0,
-    className: "slider variable-width",
-    variableWidth: true,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4,
+          slidesToShow: 3,
+          slidesToScroll: 3,
           infinite: true,
           dots: true,
         },
@@ -26,9 +26,9 @@ function SliderComponent() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 1,
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
         },
       },
       {
@@ -64,7 +64,7 @@ function SliderComponent() {
   ];
 
   return (
-    <div style={{ width: "400px" }}>
+    <div style={{ width: "300px" }}>
       <div>
         <Slider {...settings}>
           {data_item?.map((row, key) => {
