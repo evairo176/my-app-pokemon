@@ -455,3 +455,7 @@
   display: flex;
   margin: auto;
 }
+.container-idea-f {
+  width: 100%;
+  display: flex;
+}

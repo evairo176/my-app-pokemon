@@ -32,6 +32,10 @@
     margin-right: 10px;
     padding: 30px 30px;
   }
+  .container-idea-f {
+    width: 100%;
+    display: block;
+  }
 }
 
 @media (min-width: 480px) and (max-width: 575.98px) {
@@ -141,6 +145,15 @@
   .container-content-banner {
     padding-top: 80px;
     position: relative;
+  }
+  .container-card-f {
+    width: 100%;
+    max-width: 1000px;
+    position: relative;
+    overflow: hidden;
+  }
+  .container-card-f:hover {
+    overflow: auto;
   }
   .card-idea {
     margin-right: 10px;
