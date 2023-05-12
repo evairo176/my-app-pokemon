@@ -6,6 +6,7 @@ import FloatingSquare from "../../components/atoms/FloatingSquare";
 import "../../assets/css/landingpage.css";
 import "../../assets/css/responsive.css";
 import SliderComponent from "../../components/moleculars/SliderComponent";
+import Maps from "../../components/moleculars/Maps";
 
 function Home() {
   return (
@@ -55,6 +56,9 @@ function Home() {
           <SliderComponent />
         </div>
       </section>
+      <TemplateComponent>
+        <Maps />
+      </TemplateComponent>
     </Fragment>
   );
 }
