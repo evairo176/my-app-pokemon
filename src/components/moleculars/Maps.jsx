@@ -35,10 +35,7 @@ function Maps() {
     }
   };
   return (
-    <LoadScript
-      libraries={["places"]}
-      googleMapsApiKey="AIzaSyCzQRw5NCO0YkkmfA0bldR0Kwp1DHJwHNU"
-    >
+    <LoadScript libraries={["places"]} googleMapsApiKey="">
       <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
         <input
           type="text"
