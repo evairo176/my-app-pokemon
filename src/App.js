@@ -8,8 +8,6 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../src/assets/css/custom.css";
 
-import NavbarComponent from "./components/atoms/NavbarComponent";
-
 function App() {
   const storeData = useSelector((store) => store?.global);
   const { isLoading } = storeData;
@@ -17,7 +15,7 @@ function App() {
   return (
     <BrowserRouter>
       <ToastContainer />
-      <NavbarComponent />
+      {/* <NavbarComponent /> */}
       {isLoading && <Loading />}
       <AppRoutes />
     </BrowserRouter>
