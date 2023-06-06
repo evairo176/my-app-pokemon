@@ -1,9 +1,17 @@
 import React from "react";
 import ProfileComponent from "../../components/moleculars/ProfileComponent";
-import "../../assets/css/profile.css";
+import FooterProfileComponent from "../../components/moleculars/FooterProfileComponent";
+import "../../assets/css/home.css";
 
 function Home() {
-  return <ProfileComponent />;
+  return (
+    <>
+      <div className="home-container">
+        <ProfileComponent />
+        <FooterProfileComponent />
+      </div>
+    </>
+  );
 }
 
 export default Home;
