@@ -1,5 +1,5 @@
 import React from "react";
-import Typical from "react-typical";
+import { TypeAnimation } from "react-type-animation";
 
 function ProfileComponent() {
   return (
@@ -35,9 +35,8 @@ function ProfileComponent() {
             <span className="primary-text">
               <h1>
                 {" "}
-                <Typical
-                  loop={Infinity}
-                  steps={[
+                <TypeAnimation
+                  sequence={[
                     "Ethusiastic Dev 🚀",
                     1000,
                     "Full Stack Developer 💻",
@@ -49,6 +48,9 @@ function ProfileComponent() {
                     "React/React Native Dev 📱",
                     1000,
                   ]}
+                  wrapper="span"
+                  cursor={true}
+                  repeat={Infinity}
                 />
               </h1>
               <span className="profile-role-tagline">
