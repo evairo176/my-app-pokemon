@@ -1,5 +1,5 @@
-import React, { Component } from "react";
 import { TOTAL_SCREENS } from "./cummonUtils";
+import { Subject } from "rxjs";
 
 export default class ScrollManagement {
   static scrollHandler = new ScrollManagement();
@@ -8,7 +8,7 @@ export default class ScrollManagement {
   static currentScreenFadeIn = new Subject();
 
   constructor() {
-    window.addEventListener("scroll", this.checkCurrentScreenUnderViewPort);
+    window.addEventListener("scroll", this.checkCurrentScreenUnderViewPort());
   }
 
   scrollToHireMe = () => {
@@ -46,38 +46,37 @@ export default class ScrollManagement {
       default:
         return false;
     }
+  };
+  checkCurrentScreenUnderViewPort = (event) => {
+    if (!event || Object.keys(event).length < 1) {
+      return;
+    }
 
-    checkCurrentScreenUnderViewPort = (event) => {
-      if (!event || object.keys(event).length < 1) {
-        return;
-      }
+    for (let screen of TOTAL_SCREENS) {
+      let screenFromDom = document.getElementById(screen.screen_name);
+      if (!screenFromDom) continue;
 
-      for (let screen of TOTAL_SCREENS) {
-        let screenFromDom = document.getElementById(screen.screen_name);
-        if (!screenFromDom) continue;
+      let fullyVisible = this.isElementInView(screenFromDom, "complete");
+      let partiallyVisible = this.isElementInView(screenFromDom, "partial");
 
-        let fullyVisible = this.isElementInView(screenFromDom, "complete");
-        let partiallyVisible = this.isElementInView(screenFromDom, "partial");
+      if (fullyVisible || partiallyVisible) {
+        if (partiallyVisible && !screen.alreadyRendered) {
+          ScrollManagement.currentScreenFadeIn.next({
+            fadeInScreen: screen.screen_name,
+          });
 
-        if (fullyVisible || partiallyVisible) {
-          if (partiallyVisible && !screen.alreadyRendered) {
-            ScrollManagement.currentScreenFadeIn.next({
-              fadeInScreen: screen.screen_name,
-            });
+          screen["alreadyRendered"] = true;
+          break;
+        }
 
-            screen["alreadyRendered"] = true;
-            break;
-          }
+        if (fullyVisible) {
+          ScrollManagement.currentScreenBroadCaster.next({
+            screenInView: screen.screen_name,
+          });
 
-          if (fullyVisible) {
-            ScrollManagement.currentScreenBroadCaster.next({
-              screenInView: screen.screen_name,
-            });
-
-            break;
-          }
+          break;
         }
       }
-    };
+    }
   };
 }
