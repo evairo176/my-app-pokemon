@@ -35,16 +35,11 @@ function HeaderComponent() {
   };
 
   const getHeaderOptionsClass = (key) => {
-    let classes = "header-option";
+    let cekl = "";
+    if (key < TOTAL_SCREENS.length - 1) cekl += "header-option-seperator ";
 
-    if (key < TOTAL_SCREENS.length - 1) {
-      classes += "header-option-seperator";
-    }
-
-    if (selectScreen === key) {
-      classes += "selected-header-option";
-      return;
-    }
+    if (selectScreen === key) cekl += "selected-header-option";
+    return cekl;
   };
 
   const switchScreen = (key, screen) => {

@@ -57,19 +57,21 @@
   .header-option {
     display: flex;
     flex-direction: column;
+    align-items: center;
     position: fixed;
     left: -100%;
     top: 0px;
     height: 100%;
     width: 100%;
-    justify-content: space-around;
+    justify-content: center;
     background-color: #1f2235;
     z-index: 1000;
     opacity: 0.8;
     transition: all 0.8s ease-out;
   }
-  .header-option-seperator {
+  .header-option-seperator:not(:last-child) {
     margin: 0;
+    margin-bottom: 10px;
   }
   .selected-header-option {
     color: var(--white);

@@ -1,9 +1,14 @@
+import About from "../pages/aboutMe/About";
 import Home from "../pages/home/Home";
 
 export const TOTAL_SCREENS = [
   {
     screen_name: "Home",
     component: Home,
+  },
+  {
+    screen_name: "About",
+    component: About,
   },
 ];
 
