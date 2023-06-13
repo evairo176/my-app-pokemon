@@ -71,7 +71,7 @@ function Resume({ id }) {
         if (
           //   scrollPosition >= divOffset + 904 &&
           scrollPosition >=
-          divOffset + divHeight - 250
+          divOffset + divHeight - 150
         ) {
           //   console.log(div.id);
         } else {
