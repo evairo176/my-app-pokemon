@@ -6,6 +6,7 @@
   min-height: fit-content;
   margin: 120px 0;
 }
+
 .resume-card {
   display: flex;
   height: 360px;
@@ -189,6 +190,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
   .bullets {
     width: 90%;
@@ -203,7 +205,7 @@
   }
   .resume-bullet-details {
     height: 360px;
-    width: fit-content;
+    width: 100%;
     padding: 0;
   }
   .resume-bullets {
