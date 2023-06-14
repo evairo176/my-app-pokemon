@@ -4,6 +4,7 @@ import ScrollManagement from "../../utils/ScrollManagement";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import "../../assets/css/header.css";
+import logo from "../../assets/images/icon/logo_evairo.png";
 
 function HeaderComponent() {
   const [selectScreen, setSelectScreen] = useState(0);
@@ -66,7 +67,7 @@ function HeaderComponent() {
             <FontAwesomeIcon className="header-hamburger-bars" icon={faBars} />
           </div>
           <div className="header-logo">
-            <span>EVAIRO~</span>
+            <img src={logo} alt="logo evairo" />
           </div>
           <div
             className={

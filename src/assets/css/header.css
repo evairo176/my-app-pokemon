@@ -19,6 +19,10 @@
   font-family: "Poppins ExtraBold";
   color: var(--white);
 }
+.header-logo img {
+  width: 100%;
+  max-width: 150px;
+}
 .header-option {
   display: flex;
   align-items: center;
