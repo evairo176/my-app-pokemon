@@ -1,89 +1,19 @@
-import React, { useRef, useState } from "react";
+import React, { Fragment, useRef, useState } from "react";
 import ScreenHeading from "../../components/moleculars/ScreenHeading";
 import ScrollManagement from "../../utils/ScrollManagement";
 import "../../assets/css/resume.css";
 import { useEffect } from "react";
 
-const ScrollButton = ({ id, active, setActiveButton, logo, label, divId }) => {
-  const handleScrollFadeIn = (index) => {
-    // console.log(index);
-    const targetElement = document.getElementById(index);
-    console.log(targetElement.scrollHeight);
-    //
-
-    if (targetElement) {
-      targetElement.scrollIntoView({
-        behavior: "smooth",
-      });
-
-      setActiveButton(index);
-    }
-  };
-  return (
-    <div
-      id={id}
-      onClick={() => handleScrollFadeIn(divId)}
-      className={active ? "bullet selected-bullet" : "bullet"}
-    >
-      <img
-        className="bullet-logo"
-        src={require(`../../assets/images/resume/${logo}`)}
-        alt="Opps,,,, no internet connection"
-      />
-      <span className="bullet-label">{label}</span>
-    </div>
-  );
-};
-
 function Resume({ id }) {
   //   const [selectedBulletIndex, setSelectedBulletIndex] = useState("0");
-  const cekRef = useRef();
 
-  //   let fadeInScreenHandler = (screen) => {
-  //     if (screen.fadeScreen !== id) {
-  //       return Animation.animations.fadeInScreen(id);
-  //     }
-  //   };
-
-  const handleScroll = () => {
-    if (cekRef.current) {
-      //   const scrollValue = cekRef.current.scrollTop + window.screenY;
-      //   const elementScroll = document.getElementsByClassName(
-      //     "resume-bullet-details"
-      //   );
-      const scrollPosition =
-        cekRef.current.scrollTop + window.scrollY ||
-        document.documentElement.scrollY;
-      //   console.log({ scrollPosition });
-
-      const divs = document.getElementsByClassName("scrollable-div");
-      //   console.log(di);
-
-      for (let i = 0; i < divs.length; i++) {
-        const div = divs[i];
-
-        const divOffset = div.offsetTop;
-        const divHeight = div.clientHeight;
-
-        // console.log({ divOffset: divHeight + divOffset });
-        // console.log({ divHeight });
-
-        if (
-          //   scrollPosition >= divOffset + 904 &&
-          scrollPosition >=
-          divOffset + divHeight - 150
-        ) {
-          //   console.log(div.id);
-        } else {
-          setActiveButton(div.id);
-          return 0;
-        }
-      } // You can use the scrollValue as per your requirement
+  let fadeInScreenHandler = (screen) => {
+    if (screen.fadeScreen !== id) {
+      return Animation.animations.fadeInScreen(id);
     }
   };
-
-  //   const fadeInSubcription =
-  //     ScrollManagement.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+  const fadeInSubcription =
+    ScrollManagement.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
   const ResumeHeading = ({
     heading,
@@ -95,7 +25,7 @@ function Resume({ id }) {
     return (
       <div className="resume-heading">
         <div className="resume-main-heading">
-          <div className="heading-bullet"></div>
+          <div className="heading-bullet">1</div>
           <div>
             <div className="resume-title-heading">
               <span>{heading ? heading : ""}</span>
@@ -120,15 +50,202 @@ function Resume({ id }) {
   };
 
   const resumeBullets = [
-    { id: "1", label: "Education", logoSrc: "education.svg", content: {} },
+    {
+      id: "1",
+      label: "Education",
+      logoSrc: "education.svg",
+      content: [
+        {
+          heading: "Politeknik Negeri Indramayu, Indramayu",
+          subHeading: "D3 TEKNIK INFORMATIKA",
+          fromDate: "2019",
+          toDate: "2022",
+        },
+        {
+          heading: "SMK Negeri 1 Losarang, Indramayu",
+          subHeading: "TEKNIK MESIN",
+          fromDate: "2016",
+          toDate: "2019",
+        },
+        {
+          heading: "SMP Negeri 1 Anjatan, Indramayu",
+          subHeading: "-",
+          fromDate: "2013",
+          toDate: "2016",
+        },
+        {
+          heading: "SD Negeri Cilandak Lor 1, Indramayu",
+          subHeading: "-",
+          fromDate: "2013",
+          toDate: "2016",
+        },
+      ],
+    },
     {
       id: "2",
       label: "Work History",
       logoSrc: "work-history.svg",
+      content: [
+        {
+          heading: "Politeknik Negeri Indramayu, Indramayu",
+          subHeading: "D3 TEKNIK INFORMATIKA",
+          fromDate: "2019",
+          toDate: "2022",
+          description: [
+            `- Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+            saepe earum atque fugit, voluptates ad non. Illum eius ut rerum
+            unde.`,
+            `- Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+            saepe earum atque fugit, voluptates ad non. Illum eius ut rerum
+            unde.`,
+            `- Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+            saepe earum atque fugit, voluptates ad non. Illum eius ut rerum
+            unde.`,
+          ],
+        },
+        {
+          heading: "SMK Negeri 1 Losarang, Indramayu",
+          subHeading: "TEKNIK MESIN",
+          fromDate: "2016",
+          toDate: "2019",
+          description: [
+            `- Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+            saepe earum atque fugit, voluptates ad non. Illum eius ut rerum
+            unde.`,
+          ],
+        },
+        {
+          heading: "SMP Negeri 1 Anjatan, Indramayu",
+          subHeading: "-",
+          fromDate: "2013",
+          toDate: "2016",
+          description: [
+            `- Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+            saepe earum atque fugit, voluptates ad non. Illum eius ut rerum
+            unde.`,
+            `- Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+            saepe earum atque fugit, voluptates ad non. Illum eius ut rerum
+            unde.`,
+          ],
+        },
+        {
+          heading: "SD Negeri Cilandak Lor 1, Indramayu",
+          subHeading: "-",
+          fromDate: "2013",
+          toDate: "2016",
+          description: [
+            `- Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+            saepe earum atque fugit, voluptates ad non. Illum eius ut rerum
+            unde.`,
+            `- Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+            saepe earum atque fugit, voluptates ad non. Illum eius ut rerum
+            unde.`,
+            `- Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+            saepe earum atque fugit, voluptates ad non. Illum eius ut rerum
+            unde.`,
+            `- Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+            saepe earum atque fugit, voluptates ad non. Illum eius ut rerum
+            unde.`,
+            `- Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+            saepe earum atque fugit, voluptates ad non. Illum eius ut rerum
+            unde.`,
+          ],
+        },
+      ],
     },
-    { id: "3", label: "Programming Skills", logoSrc: "programming-skills.svg" },
-    { id: "4", label: "Projects", logoSrc: "projects.svg" },
-    { id: "5", label: "Interests", logoSrc: "interests.svg" },
+    {
+      id: "3",
+      label: "Programming Skills",
+      logoSrc: "programming-skills.svg",
+      content: [
+        {
+          skill: "Javascript",
+          ratingPercentage: 85,
+        },
+        {
+          skill: "React Js",
+          ratingPercentage: 90,
+        },
+        {
+          skill: "React Native",
+          ratingPercentage: 75,
+        },
+        {
+          skill: "Express JS",
+          ratingPercentage: 89,
+        },
+        {
+          skill: "Node JS",
+          ratingPercentage: 89,
+        },
+        {
+          skill: "Mongo Db",
+          ratingPercentage: 80,
+        },
+        {
+          skill: "HTML",
+          ratingPercentage: 90,
+        },
+        {
+          skill: "CSS",
+          ratingPercentage: 90,
+        },
+      ],
+    },
+    {
+      id: "4",
+      label: "Projects",
+      logoSrc: "projects.svg",
+      content: [
+        {
+          heading: "Website Pemesanan Wisata (Midtrans dan laravel 8)",
+          subHeading: "Project Pribadi",
+          fromDate: "OKT 2022",
+          toDate: "Sekarang",
+        },
+        {
+          heading: "SMK Negeri 1 Losarang, Indramayu",
+          subHeading: "TEKNIK MESIN",
+          fromDate: "2016",
+          toDate: "2019",
+        },
+        {
+          heading: "SMP Negeri 1 Anjatan, Indramayu",
+          subHeading: "-",
+          fromDate: "2013",
+          toDate: "2016",
+        },
+        {
+          heading: "SD Negeri Cilandak Lor 1, Indramayu",
+          subHeading: "-",
+          fromDate: "2013",
+          toDate: "2016",
+        },
+      ],
+    },
+    {
+      id: "5",
+      label: "Interests",
+      logoSrc: "interests.svg",
+      content: [
+        {
+          heading: "Website Pemesanan Wisata (Midtrans dan laravel 8)",
+          subHeading: "Project Pribadi",
+        },
+        {
+          heading: "SMK Negeri 1 Losarang, Indramayu",
+          subHeading: "TEKNIK MESIN",
+        },
+        {
+          heading: "SMP Negeri 1 Anjatan, Indramayu",
+          subHeading: "-",
+        },
+        {
+          heading: "SD Negeri Cilandak Lor 1, Indramayu",
+          subHeading: "-",
+        },
+      ],
+    },
   ];
 
   //   const programmingSkills = [
@@ -278,9 +395,9 @@ function Resume({ id }) {
   //             </span>
   //             <br />
   //             <span className="resume-description-text">
-  //               - Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-  //               saepe earum atque fugit, voluptates ad non. Illum eius ut rerum
-  //               unde.
+  // - Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+  // saepe earum atque fugit, voluptates ad non. Illum eius ut rerum
+  // unde.
   //             </span>
   //             <br />
   //             <span className="resume-description-text">
@@ -442,47 +559,33 @@ function Resume({ id }) {
   //       </div>
   //     </div>
   //   );
-  const [activeButton, setActiveButton] = useState(null);
-  const divs = [
-    { id: "div1", content: "Div 1" },
-    { id: "div2", content: "Div 2" },
-    { id: "div3", content: "Div 3" },
-  ];
+  const [activeButton, setActiveButton] = useState("1");
 
-  //   useEffect(() => {
-  //     const handleScroll = () => {
-  //       const elementScroll = document.getElementsByClassName(
-  //         "resume-bullet-details"
-  //       );
-  //       const scrollPosition = elementScroll.scrollTop;
-  //       console.log({ scrollPosition });
+  const toggleShowClass = (index) => {
+    const resumeContent = document.getElementById("resume" + index);
+    resumeContent.scrollIntoView({
+      top: 0,
+      behavior: "smooth",
+    });
+    setActiveButton(index);
+  };
 
-  //       //   const divs = document.getElementsByClassName("scrollable-div");
-  //       //   console.log(di);
-
-  //       for (let i = 0; i < divs.length; i++) {
-  //         const div = divs[i];
-  //         const divOffset = div.offsetTop;
-  //         const divHeight = div.clientHeight;
-  //         console.log(
-  //           scrollPosition >= divOffset && scrollPosition < divOffset + divHeight
-  //         );
-
-  //         if (
-  //           scrollPosition >= divOffset &&
-  //           scrollPosition < divOffset + divHeight
-  //         ) {
-  //           setActiveButton(div.id);
-  //           break;
-  //         }
-  //       }
-  //     };
-
-  //     window.addEventListener("scroll", handleScroll);
-  //     return () => {
-  //       window.removeEventListener("scroll", handleScroll);
-  //     };
-  //   }, []);
+  const ScrollButton = ({ id, activeButton, logo, label }) => {
+    return (
+      <div
+        id={id}
+        onClick={() => toggleShowClass(id)}
+        className={activeButton === id ? "bullet selected-bullet" : "bullet"}
+      >
+        <img
+          className="bullet-logo"
+          src={require(`../../assets/images/resume/${logo}`)}
+          alt="Opps,,,, no internet connection"
+        />
+        <span className="bullet-label">{label}</span>
+      </div>
+    );
+  };
 
   return (
     <div className="resume-container screen-container" id={id || ""}>
@@ -496,11 +599,11 @@ function Resume({ id }) {
                 {resumeBullets?.map((row) => {
                   return (
                     <ScrollButton
-                      id={"button" + row?.id}
-                      divId={row.id}
-                      active={activeButton === row.id}
+                      key={row.id}
+                      id={row?.id}
                       logo={row.logoSrc}
                       label={row.label}
+                      activeButton={activeButton}
                       setActiveButton={setActiveButton}
                     />
                   );
@@ -508,114 +611,153 @@ function Resume({ id }) {
               </div>
             </div>
           </div>
-          <div
-            className="resume-bullet-details"
-            ref={cekRef}
-            onScroll={handleScroll}
-          >
+          <div className="resume-bullet-details">
             {resumeBullets?.map((row) => {
-              return (
-                <div id={row?.id} key={row?.id} className="scrollable-div">
-                  <h1>Test{row.id}</h1>
-                  <ResumeHeading
-                    heading="Politeknik Negeri Indramayu, Indramayu"
-                    subHeading="D3 TEKNIK INFORMATIKA"
-                    fromDate="2019"
-                    toDate="2022"
-                  />
-                  <ResumeHeading
-                    heading="Politeknik Negeri Indramayu, Indramayu"
-                    subHeading="D3 TEKNIK INFORMATIKA"
-                    fromDate="2019"
-                    toDate="2022"
-                  />
-                  <ResumeHeading
-                    heading="Politeknik Negeri Indramayu, Indramayu"
-                    subHeading="D3 TEKNIK INFORMATIKA"
-                    fromDate="2019"
-                    toDate="2022"
-                  />
-                  <ResumeHeading
-                    heading="Politeknik Negeri Indramayu, Indramayu"
-                    subHeading="D3 TEKNIK INFORMATIKA"
-                    fromDate="2019"
-                    toDate="2022"
-                  />
-                  <ResumeHeading
-                    heading="Politeknik Negeri Indramayu, Indramayu"
-                    subHeading="D3 TEKNIK INFORMATIKA"
-                    fromDate="2019"
-                    toDate="2022"
-                  />
-                  <ResumeHeading
-                    heading="Politeknik Negeri Indramayu, Indramayu"
-                    subHeading="D3 TEKNIK INFORMATIKA"
-                    fromDate="2019"
-                    toDate="2022"
-                  />
-                  <ResumeHeading
-                    heading="Politeknik Negeri Indramayu, Indramayu"
-                    subHeading="D3 TEKNIK INFORMATIKA"
-                    fromDate="2019"
-                    toDate="2022"
-                  />
-                  <ResumeHeading
-                    heading="Politeknik Negeri Indramayu, Indramayu"
-                    subHeading="D3 TEKNIK INFORMATIKA"
-                    fromDate="2019"
-                    toDate="2022"
-                  />
-                  <ResumeHeading
-                    heading="Politeknik Negeri Indramayu, Indramayu"
-                    subHeading="D3 TEKNIK INFORMATIKA"
-                    fromDate="2019"
-                    toDate="2022"
-                  />
-                  <ResumeHeading
-                    heading="Politeknik Negeri Indramayu, Indramayu"
-                    subHeading="D3 TEKNIK INFORMATIKA"
-                    fromDate="2019"
-                    toDate="2022"
-                  />
-                  <ResumeHeading
-                    heading="Politeknik Negeri Indramayu, Indramayu"
-                    subHeading="D3 TEKNIK INFORMATIKA"
-                    fromDate="2019"
-                    toDate="2022"
-                  />
-                  <ResumeHeading
-                    heading="Politeknik Negeri Indramayu, Indramayu"
-                    subHeading="D3 TEKNIK INFORMATIKA"
-                    fromDate="2019"
-                    toDate="2022"
-                  />
-                  <ResumeHeading
-                    heading="Politeknik Negeri Indramayu, Indramayu"
-                    subHeading="D3 TEKNIK INFORMATIKA"
-                    fromDate="2019"
-                    toDate="2022"
-                  />
-                  <ResumeHeading
-                    heading="Politeknik Negeri Indramayu, Indramayu"
-                    subHeading="D3 TEKNIK INFORMATIKA"
-                    fromDate="2019"
-                    toDate="2022"
-                  />
-                  <ResumeHeading
-                    heading="Politeknik Negeri Indramayu, Indramayu"
-                    subHeading="D3 TEKNIK INFORMATIKA"
-                    fromDate="2019"
-                    toDate="2022"
-                  />
-                  <ResumeHeading
-                    heading="Politeknik Negeri Indramayu, Indramayu"
-                    subHeading="D3 TEKNIK INFORMATIKA"
-                    fromDate="2019"
-                    toDate="2022"
-                  />
-                  <hr />
-                </div>
-              );
+              switch (row.label) {
+                case "Education":
+                  return (
+                    <div
+                      key={row.id}
+                      id={"resume" + row.id}
+                      className={`${
+                        "resume" + activeButton === "resume" + row.id
+                          ? "resume-screen-container resume-screen-jusitfy-none resume-hide resume-show"
+                          : "resume-screen-container resume-screen-jusitfy-none resume-hide "
+                      }`}
+                    >
+                      {row?.content?.map((row, key) => {
+                        return (
+                          <ResumeHeading
+                            key={key}
+                            heading={row.heading}
+                            subHeading={row.subHeading}
+                            fromDate={row.fromDate}
+                            toDate={row.toDate}
+                          />
+                        );
+                      })}
+                      <hr />
+                    </div>
+                  );
+                case "Work History":
+                  return (
+                    <div
+                      key={row.id}
+                      id={"resume" + row.id}
+                      className={`${
+                        "resume" + activeButton === "resume" + row.id
+                          ? "resume-screen-container resume-screen-jusitfy-none resume-hide resume-show"
+                          : "resume-screen-container resume-screen-jusitfy-none resume-hide "
+                      }`}
+                    >
+                      {row?.content?.map((row, key) => {
+                        return (
+                          <div key={key}>
+                            <ResumeHeading
+                              heading={row.heading}
+                              subHeading={row.subHeading}
+                              fromDate={row.fromDate}
+                              toDate={row.toDate}
+                            />
+                            <div className="experience-description">
+                              {row?.description?.map((row, key) => {
+                                return (
+                                  <Fragment key={key}>
+                                    {" "}
+                                    <span className="resume-description-text">
+                                      {row}
+                                    </span>
+                                    <br />
+                                  </Fragment>
+                                );
+                              })}
+                            </div>
+                            <hr />
+                          </div>
+                        );
+                      })}
+                    </div>
+                  );
+                case "Programming Skills":
+                  return (
+                    <div
+                      key={row.id}
+                      id={"resume" + row.id}
+                      className={`${
+                        "resume" + activeButton === "resume" + row.id
+                          ? "resume-screen-container programming-skills-container resume-hide resume-show"
+                          : "resume-screen-container programming-skills-container resume-hide "
+                      }`}
+                    >
+                      {row?.content?.map((row, key) => {
+                        return (
+                          <div key={key} className="skill-parent">
+                            <div className="heading-bullet"></div>
+                            <span>{row.skill}</span>
+                            <div className="skill-percentage">
+                              <div
+                                style={{
+                                  width: row.ratingPercentage + "%",
+                                }}
+                                className="active-percentage-bar"
+                              ></div>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  );
+                case "Projects":
+                  return (
+                    <div
+                      key={row.id}
+                      id={"resume" + row.id}
+                      className={`${
+                        "resume" + activeButton === "resume" + row.id
+                          ? "resume-screen-container resume-screen-jusitfy-none resume-hide resume-show"
+                          : "resume-screen-container resume-screen-jusitfy-none resume-hide"
+                      }`}
+                    >
+                      {row?.content?.map((row, key) => {
+                        return (
+                          <ResumeHeading
+                            key={key}
+                            heading={row.heading}
+                            subHeading={row.subHeading}
+                            fromDate={row.fromDate}
+                            toDate={row.toDate}
+                          />
+                        );
+                      })}
+                    </div>
+                  );
+                case "Interests":
+                  return (
+                    <div
+                      key={row.id}
+                      id={"resume" + row.id}
+                      className={`${
+                        "resume" + activeButton === "resume" + row.id
+                          ? "resume-screen-container resume-screen-jusitfy-none resume-hide resume-show"
+                          : "resume-screen-container resume-screen-jusitfy-none resume-hide"
+                      }`}
+                    >
+                      {row?.content?.map((row, key) => {
+                        return (
+                          <ResumeHeading
+                            key={key}
+                            heading={row.heading}
+                            subHeading={row.subHeading}
+                            fromDate={row.fromDate}
+                            toDate={row.toDate}
+                          />
+                        );
+                      })}
+                    </div>
+                  );
+                default:
+                  return "error";
+              }
             })}
           </div>
         </div>
