@@ -249,6 +249,7 @@ function Resume({ id }) {
   return (
     <div className="resume-container screen-container" id={id || ""}>
       <div className="resume-content">
+        <ScreenHeading title="Resume" subHeading="My Formal Bio Details" />
         <div className="resume-card">
           <div className="resume-bullets">
             <div className="bullet-container">
