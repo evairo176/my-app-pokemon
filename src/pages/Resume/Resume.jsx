@@ -87,68 +87,23 @@ function Resume({ id }) {
       logoSrc: "work-history.svg",
       content: [
         {
-          heading: "Politeknik Negeri Indramayu, Indramayu",
-          subHeading: "D3 TEKNIK INFORMATIKA",
-          fromDate: "2019",
-          toDate: "2022",
+          heading: "PT. Xtreme Network Sistem (TNOS)",
+          subHeading: "Full Stack Web Developer",
+          fromDate: "OKT 2022",
+          toDate: "Sekarang",
           description: [
-            `- Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-            saepe earum atque fugit, voluptates ad non. Illum eius ut rerum
-            unde.`,
-            `- Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-            saepe earum atque fugit, voluptates ad non. Illum eius ut rerum
-            unde.`,
-            `- Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-            saepe earum atque fugit, voluptates ad non. Illum eius ut rerum
-            unde.`,
+            `1. Membuat PWA Website dengan menggunakan React Js dan laravel 8, dengan fitur Google Map, dan Payment Xendit Custom`,
+            `2. Membuat fitur-fitur di dashboard seperti email masal dan push notif ke mobile dengan menggunakan API, Laravel dan React JS`,
           ],
         },
         {
-          heading: "SMK Negeri 1 Losarang, Indramayu",
-          subHeading: "TEKNIK MESIN",
-          fromDate: "2016",
-          toDate: "2019",
+          heading: "PT. Technogis Indonesia",
+          subHeading: "Full Stack Web Developer",
+          fromDate: "JUL 2021",
+          toDate: "DES 2022",
           description: [
-            `- Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-            saepe earum atque fugit, voluptates ad non. Illum eius ut rerum
-            unde.`,
-          ],
-        },
-        {
-          heading: "SMP Negeri 1 Anjatan, Indramayu",
-          subHeading: "-",
-          fromDate: "2013",
-          toDate: "2016",
-          description: [
-            `- Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-            saepe earum atque fugit, voluptates ad non. Illum eius ut rerum
-            unde.`,
-            `- Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-            saepe earum atque fugit, voluptates ad non. Illum eius ut rerum
-            unde.`,
-          ],
-        },
-        {
-          heading: "SD Negeri Cilandak Lor 1, Indramayu",
-          subHeading: "-",
-          fromDate: "2013",
-          toDate: "2016",
-          description: [
-            `- Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-            saepe earum atque fugit, voluptates ad non. Illum eius ut rerum
-            unde.`,
-            `- Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-            saepe earum atque fugit, voluptates ad non. Illum eius ut rerum
-            unde.`,
-            `- Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-            saepe earum atque fugit, voluptates ad non. Illum eius ut rerum
-            unde.`,
-            `- Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-            saepe earum atque fugit, voluptates ad non. Illum eius ut rerum
-            unde.`,
-            `- Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-            saepe earum atque fugit, voluptates ad non. Illum eius ut rerum
-            unde.`,
+            `1. Membuat Website Inventori barang internal dengan menggunakan laravel`,
+            `2. Menslicing atau mengconveret Figma to HTML 18 Halaman dari website Utama Jagoweb`,
           ],
         },
       ],
@@ -198,28 +153,44 @@ function Resume({ id }) {
       logoSrc: "projects.svg",
       content: [
         {
-          heading: "Website Pemesanan Wisata (Midtrans dan laravel 8)",
-          subHeading: "Project Pribadi",
-          fromDate: "OKT 2022",
-          toDate: "Sekarang",
+          heading: "PT Xtreme Network Sistem",
+          subHeading: "Full Stack Dev",
+          description: [
+            `1. Membuat PWA Website (Google Maps, Xendit Custom, Api Telegram, React-Redux, React Js, Laravel 8, Integrasi API backend)`,
+            `2. Membuat fitur-fitur di dashboard seperti email masal dan push notif ke mobile dengan menggunakan API, Laravel dan React JS`,
+          ],
         },
         {
-          heading: "SMK Negeri 1 Losarang, Indramayu",
-          subHeading: "TEKNIK MESIN",
-          fromDate: "2016",
-          toDate: "2019",
+          heading: "Dinas Pemberdayaan Masyarakat dan Desa Kabupaten Indramayu",
+          subHeading: "Full Stack Dev",
+          description: [
+            `1. Membuat aplikasi rancang bangun web penyajian pelaporan kegiatan posyandu pada Dinas Pemberdayaan Masyarakat dan Desa Kabupaten Indramayu, dengan menggunakan laravel 8`,
+          ],
         },
         {
-          heading: "SMP Negeri 1 Anjatan, Indramayu",
-          subHeading: "-",
-          fromDate: "2013",
-          toDate: "2016",
+          heading: "PT. Techogis Indonesia",
+          subHeading: "Full Stack Dev",
+          description: [
+            `1. Membuat Website Inventori barang internal dengan menggunakan laravel`,
+            `2. Menslicing atau mengconveret Figma to HTML 18 Halaman dari website Utama Jagoweb`,
+          ],
         },
         {
-          heading: "SD Negeri Cilandak Lor 1, Indramayu",
-          subHeading: "-",
-          fromDate: "2013",
-          toDate: "2016",
+          heading: "Projek Pribadi",
+          subHeading: "Full Stack Dev",
+          description: [
+            `1. Membuat Website SIAKAD Sekolah Menengah Atas, dengan menggunakan Codeigniter 4`,
+            `2. Membuat tampilan atau integrasi API Youtube dan wikipedia menggunakan React Js`,
+            `3. Membuat Website Blog (React Js, Express Js, dan MongoDb)`,
+            `4. Membuat App Food Market (React Native, dan Laravel Api)`,
+          ],
+        },
+        {
+          heading: "Freelance",
+          subHeading: "Full Stack Dev",
+          description: [
+            `1. Membuat Web Pemesanan Wisata dengan laravel 8 menggunakan metode pembayaran Midtrans`,
+          ],
         },
       ],
     },
@@ -720,13 +691,28 @@ function Resume({ id }) {
                     >
                       {row?.content?.map((row, key) => {
                         return (
-                          <ResumeHeading
-                            key={key}
-                            heading={row.heading}
-                            subHeading={row.subHeading}
-                            fromDate={row.fromDate}
-                            toDate={row.toDate}
-                          />
+                          <div key={key}>
+                            <ResumeHeading
+                              heading={row.heading}
+                              subHeading={row.subHeading}
+                              fromDate={row.fromDate}
+                              toDate={row.toDate}
+                            />
+                            <div className="experience-description">
+                              {row?.description?.map((row, key) => {
+                                return (
+                                  <Fragment key={key}>
+                                    {" "}
+                                    <span className="resume-description-text">
+                                      {row}
+                                    </span>
+                                    <br />
+                                  </Fragment>
+                                );
+                              })}
+                            </div>
+                            <hr />
+                          </div>
                         );
                       })}
                     </div>
