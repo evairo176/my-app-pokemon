@@ -93,3 +93,11 @@
   line-height: 26px;
   margin: 0;
 }
+@media only screen and (min-width: 1110px) {
+  .testimonial {
+    margin: 120px 0;
+  }
+  .container-content {
+    padding: 100px;
+  }
+}
