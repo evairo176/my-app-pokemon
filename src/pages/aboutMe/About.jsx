@@ -17,17 +17,17 @@ function About({ id }) {
 
   const SCREEN_CONSTANTS = {
     description:
-      "Full stack web and mobile developer with background knowledge of MERN stacks with redux, along with a knack of building application with utmost effeciency. Strong professional with a BSC willing to be an asset for an organization.",
+      "Full stack web dan mobile developer dengan latar belakang pengetahuan tumpukan MERN dengan redux, bersama dengan keahlian membangun aplikasi dengan efisiensi maksimal. Profesional yang kuat dengan BSC yang bersedia menjadi aset bagi organisasi.",
     highlight: {
       bullets: [
         "Full Stack web and mobile development",
-        "interactive Front End as per the design",
+        "Front End interaktif sesuai desain",
         "React and React Native",
         "Laravel, Node Js, Express JS",
         "Building REST API",
         "Managing database from MongoDb, Mysql",
       ],
-      heading: "Here are a Few Highlights:",
+      heading: "Berikut adalah Beberapa Sorotan:",
     },
   };
 
