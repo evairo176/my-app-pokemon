@@ -148,11 +148,11 @@ function Resume({ id }) {
           ratingPercentage: 80,
         },
         {
-          skill: "HTML",
+          skill: "Laravel",
           ratingPercentage: 90,
         },
         {
-          skill: "CSS",
+          skill: "Git",
           ratingPercentage: 90,
         },
       ],
