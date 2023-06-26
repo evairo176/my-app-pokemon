@@ -17,7 +17,7 @@ function About({ id }) {
 
   const SCREEN_CONSTANTS = {
     description:
-      "Full stack web dan mobile developer dengan latar belakang pengetahuan MERN stack dengan redux, bersama dengan keahlian membangun aplikasi dengan efisiensi maksimal dan Profesional yang kuat.",
+      "Full stack web dan mobile developer dengan latar belakang pengetahuan MERN stack dengan redux, bersama dengan keahlian membangun aplikasi secara efisiensi dan Profesional yang kuat.",
     highlight: {
       bullets: [
         "Full Stack web and mobile development",
