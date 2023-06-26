@@ -195,13 +195,13 @@ function Resume({ id }) {
             `4. Membuat App Food Market (React Native, dan Laravel Api)`,
           ],
         },
-        {
-          heading: "Freelance",
-          subHeading: "Full Stack Dev",
-          description: [
-            `1. Membuat Web Pemesanan Wisata dengan laravel 8 menggunakan metode pembayaran Midtrans`,
-          ],
-        },
+        // {
+        //   heading: "Freelance",
+        //   subHeading: "Full Stack Dev",
+        //   description: [
+        //     `1. Membuat Web Pemesanan Wisata dengan laravel 8 menggunakan metode pembayaran Midtrans`,
+        //   ],
+        // },
       ],
     },
     {
